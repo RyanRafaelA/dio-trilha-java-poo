@@ -1,8 +1,11 @@
+import model.Carro;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
+        Carro carro = new Carro();
 
         int opc = 0;
 
@@ -10,10 +13,13 @@ public class Main {
             menuInterativo();
             opc = sc.nextInt();
 
+            System.out.println("===========================================");
             switch(opc){
                 case 1:
+                    carro.ligar();
                     break;
                 case 2:
+                    carro.desligar();
                     break;
                 case 3:
                     break;
