@@ -8,8 +8,9 @@ public class Main {
         Carro carro = new Carro();
 
         int opc = 0;
+        char sairCarro ='n';
 
-        while(opc != 8){
+        while(sairCarro == 'n'){
             menuInterativo();
             opc = sc.nextInt();
 
@@ -20,18 +21,21 @@ public class Main {
                     break;
                 case 2:
                     carro.desligar();
+                    System.out.print("Deseja sair do carro: s/n ");
+                    sairCarro = sc.next().charAt(0);
                     break;
                 case 3:
+                    carro.acelerar();
                     break;
                 case 4:
+                    carro.desacelerar();
                     break;
                 case 5:
                     break;
                 case 6:
+                    System.out.println(carro.verificarVelocidade());
                     break;
                 case 7:
-                    break;
-                case 8:
                     break;
                 default:
                     System.out.println("Não existe essa opção.");
@@ -48,7 +52,6 @@ public class Main {
         System.out.println("[5] Virar para esquerda/direita");
         System.out.println("[6] Verificar Velocidade");
         System.out.println("[7] Trocar Marcha");
-        System.out.println("[8] sair");
         System.out.print("Digite a opção: ");
     }
 }
