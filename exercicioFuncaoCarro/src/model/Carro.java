@@ -31,14 +31,22 @@ public class Carro {
     }
 
     public void acelerar(){
-        if(velocidade<=120){
+        if(velocidade<=120 && carroLigado == true){
             velocidade++;
         }
     }
 
     public void desacelerar(){
-        if(velocidade>=0){
+        if(velocidade>=0 && carroLigado == true){
             velocidade--;
+        }
+    }
+
+    public void virarCarro(){
+        if(velocidade>=1 && velocidade<=40){
+            System.out.println("O carro esta virando");
+        } else{
+            System.out.println("O carro não pode virar nessa velocidade");
         }
     }
 
