@@ -31,14 +31,18 @@ public class Carro {
     }
 
     public void acelerar(){
-        if(velocidade<=120 && carroLigado == true){
-            velocidade++;
+        if(velocidade<=120 && carroLigado == true && marcha>0){
+            if(trocarMarcha() ==true){
+                velocidade++;
+            }
         }
     }
 
     public void desacelerar(){
-        if(velocidade>=0 && carroLigado == true){
-            velocidade--;
+        if(velocidade>=0 && carroLigado == true && marcha>0){
+            if(trocarMarcha() == true){
+                velocidade--;
+            }
         }
     }
 
@@ -51,6 +55,34 @@ public class Carro {
     }
 
     public String verificarVelocidade(){
-        return "Velocidade = "+ velocidade+ "KM";
+        return marcha+"ª --- "+velocidade+"KM";
+    }
+
+    public boolean trocarMarcha(){
+        if(velocidade>=0 && velocidade<20){
+            marcha=1;
+            return true;
+        } else if(velocidade>=20 && velocidade<40){
+            marcha=2;
+            return true;
+        } else if(velocidade>=40 && velocidade<60){
+            marcha=3;
+            return true;
+        } else if(velocidade>=40 && velocidade<80){
+            marcha=4;
+            return true;
+        } else if(velocidade>=80 && velocidade<100){
+            marcha=5;
+            return true;
+        } else if(velocidade>=100 && velocidade<=120){
+            marcha = 6;
+            return true;
+        }
+
+        if(marcha == 0){
+            return false;
+        }
+
+        return false;
     }
 }

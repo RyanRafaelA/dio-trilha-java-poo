@@ -31,11 +31,13 @@ public class Main {
                     carro.desacelerar();
                     break;
                 case 5:
+                    carro.virarCarro();
                     break;
                 case 6:
                     System.out.println(carro.verificarVelocidade());
                     break;
                 case 7:
+                    carro.trocarMarcha();
                     break;
                 default:
                     System.out.println("Não existe essa opção.");
