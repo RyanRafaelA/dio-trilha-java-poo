@@ -13,6 +13,7 @@ public class Gerente extends Funcionario {
 
     public void consultarVendas(int quantidadeVendas){
         System.out.println(quantidadeVendas);
+
     }
 
 }

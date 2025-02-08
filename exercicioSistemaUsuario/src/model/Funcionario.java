@@ -80,4 +80,12 @@ public abstract class Funcionario {
             throw new ExcecaoFuncionario("Novo email não compre com as regras");
         }
     }
+
+    @Override
+    public String toString() {
+        return "nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                ", administrador=" + administrador;
+    }
 }
