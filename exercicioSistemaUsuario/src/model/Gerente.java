@@ -6,4 +6,6 @@ public class Gerente extends Funcionario {
         super(nome, email, senha);
         super.administrador=true;
     }
+
+
 }
