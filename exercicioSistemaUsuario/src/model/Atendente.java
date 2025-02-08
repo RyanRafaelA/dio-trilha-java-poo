@@ -11,4 +11,12 @@ public class Atendente extends Funcionario{
     public double getValorEmCaixa(){
         return valorEmCaixa;
     }
+
+    public void receberPagamento(double valorPagamento){
+        this.valorEmCaixa+=valorPagamento;
+    }
+
+    public void fechaCaixa(){
+        this.valorEmCaixa = 0;
+    }
 }
