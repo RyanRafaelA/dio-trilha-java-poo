@@ -13,14 +13,16 @@ public class IngressoFamilia extends Ingresso{
 
     @Override
     public double getValor(){
-        double novoValor;
+        double valorFinal;
+        double valorBase;
 
-        novoValor = super.getValor() * quantidadeDeFamiliares;
+        valorBase = super.getValor() * quantidadeDeFamiliares;
+        valorFinal = valorBase;
 
         if(quantidadeDeFamiliares>3){
-            return novoValor-= novoValor*DESCONTO_FAMILIA;
+            valorFinal = valorBase * (1 - DESCONTO_FAMILIA);
         }
 
-        return novoValor;
+        return valorFinal;
     }
 }

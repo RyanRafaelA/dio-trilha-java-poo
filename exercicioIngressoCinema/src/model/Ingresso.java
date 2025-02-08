@@ -27,6 +27,6 @@ public class Ingresso {
 
     public String toString(){
         return "Filme: "+getNomeFilme()+"\t"+tipoFilme.getAbreviatura()+
-                "\n"+getValor();
+                "\nR$"+getValor();
     }
 }
