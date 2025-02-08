@@ -3,7 +3,7 @@ package model;
 import enums.TipoFilme;
 
 public class IngressoFamilia extends Ingresso{
-    private final double DESCONTO_FAMILIA = 1.05;
+    private final double DESCONTO_FAMILIA = 0.05;
     private int quantidadeDeFamiliares;
 
     public IngressoFamilia(double valor, String nomeFilme, TipoFilme tipoFilme, int quantidadeDeFamiliares) {
@@ -20,7 +20,7 @@ public class IngressoFamilia extends Ingresso{
         valorFinal = valorBase;
 
         if(quantidadeDeFamiliares>3){
-            valorFinal = valorBase * (1 - DESCONTO_FAMILIA);
+            valorFinal = valorBase - (valorBase*DESCONTO_FAMILIA);
         }
 
         return valorFinal;
