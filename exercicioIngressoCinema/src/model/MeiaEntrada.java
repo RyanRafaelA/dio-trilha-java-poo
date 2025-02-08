@@ -3,7 +3,7 @@ package model;
 import enums.TipoFilme;
 
 public class MeiaEntrada extends Ingresso{
-    private double INGRESSO_METADA = 0.5;
+    private final double DESCONTO_METADA = 0.5;
 
     public MeiaEntrada(double valor, String nomeFilme, TipoFilme tipoFilme) {
         super(valor, nomeFilme, tipoFilme);
@@ -11,10 +11,6 @@ public class MeiaEntrada extends Ingresso{
 
     @Override
     public double getValor(){
-        double valorComMeiaEntrada;
-
-        valorComMeiaEntrada = super.getValor();
-
-        return valorComMeiaEntrada+= super.getValor()*INGRESSO_METADA;
+        return super.getValor()*DESCONTO_METADA;
     }
 }
