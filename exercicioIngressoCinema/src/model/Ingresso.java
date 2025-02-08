@@ -24,4 +24,9 @@ public class Ingresso {
     public TipoFilme getTipoFilme(){
         return tipoFilme;
     }
+
+    public String toString(){
+        return "Filme: "+getNomeFilme()+"\t"+tipoFilme.getAbreviatura()+
+                "\n"+getValor();
+    }
 }
