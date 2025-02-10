@@ -2,5 +2,5 @@ package model;
 
 public interface Produto {
 
-    double calculoValoProduto();
+    double calculoValorImposto(double valorProduto);
 }

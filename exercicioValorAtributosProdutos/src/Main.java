@@ -1,5 +1,10 @@
+import model.Alimento;
+import model.Produto;
+
 public class Main {
     public static void main(String[] args){
-        System.out.println("Hello World!");
+        Produto produto = new Alimento();
+
+        System.out.println(produto.calculoValorImposto(100));
     }
 }
