@@ -1,7 +1,7 @@
 package model;
 
 public class Cultura implements Produto{
-    private final double PORCENTAGEM_IMPOSTO = 1.5;
+    private final double PORCENTAGEM_IMPOSTO = 4;
 
 
     @Override
